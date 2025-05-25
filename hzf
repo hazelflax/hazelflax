@@ -101,18 +101,13 @@ A: To reach a conclusion about the expected utility of the outcome, we may need 
 Q: If other agents use Hazelflax, will that cause an infinite regress?
 
 A: The actual code must terminate, so it may approximate the answer you would get if you had run Hazelflax given other agents’ code (which may itself be an approximation or other algorithm).
-(E.g. for some instances of Hazelflax, minimax is a solution that maximizes expected utility.  I.e. the ` universe ` may only take the game out a limited number of turns, so the agent with the last move doesn’t need to run any other agents.)
+(E.g. for some instances of Hazelflax, minimax is a solution that maximizes expected utility.  I.e. the `universe` may only take the game out a limited number of turns, so the agent with the last move doesn’t need to run any other agents.)
 
+Q: How can Hazelflax be approximated?
+A: It specifies `policy_ev` as a mathematical function of the parameters and abstract methods of the typeclass (which may not be computable).  One may search the space of programs for a `policy` with a high `policy_ev`.  This may be possible to prove without computing `policy_ev`.  I.e. one might search for a `policy` that can be proven to have a higher `policy_ev` than your current `policy`.  Or one might use some notion of logical expected value to search for a `policy` that you expect to have a high `policy_ev`.
+It won’t do to find a `choice` that can be proven to be compatible with a high `policy_ev` `policy`; an effective `choice` must be effective in the context of one’s bounded rationality.  I.e. your `policy` must return its `choice` using only the computing resources allowed by the `universe` every time it is invoked in `policy_ev` (e.g. time, concurrency, working memory, internal communication bandwidth).  E.g. you shouldn’t write a check given the high likelihood of there existing a policy that would give you a much higher income unless you know you can discover the policy in time. 
 
-Q: Why not represent other agents by their utility function (rather than their code)?
-
-A: To reach a conclusion about the expected utility of the outcome, we may need to model bounded rationality.  I’m not sure if the scenario where all agents can model each other perfectly can be logically consistent in general.  (It might entail an infinite regress.) In some cases there may be (e.g.) just one game-theoretic equilibrium, however game theory doesn’t always tell you the optimum strategy.  (Perhaps having defined rational behavior in the Hazelflax will facilitate a proof of the (potential) impossibility of mutual rationality.)
-
-Q: If other agents use Hazelflax, will that cause an infinite regress?
-
-A: The actual code must terminate, so it may approximate the answer you would get if you had run Hazelflax given other agents’ code (which may itself be an approximation or other algorithm).
-(E.g. for some instances of Hazelflax, minimax is a solution that maximizes expected utility.  I.e. the ` universe ` may only take the game out a limited number of turns, so the agent with the last move doesn’t need to run any other agents.)
-
+There’s surely no best decision making algorithm.  There may be different notions of approximation one can use to judge an algorithm against Hazelflax.  For any very complex set of candidate universes and notion of approximation, the Blum speedup theorem likely applies.
 
 Q: Can Hazelflax model other agents with mixed strategies (or follow a mixed strategy when doing so is optimal)?
 
