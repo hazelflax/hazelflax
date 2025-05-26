@@ -82,9 +82,9 @@ class chooser choice state observations where
         where
         step :: state -> choice -> block
         step s c =
-	  switch u s c
+          switch u s c
           | Just (s’, agent@(obs, code)) -> 
-	    (s’, agent, c’) : step s’ c’ where 
+            (s’, agent, c’) : step s’ c’ where 
 	      -- MY_CODE = code of this program, perhaps instantiated Quine-style
               c’ = if code == MY_CODE
                 then policy_fun obs
