@@ -39,10 +39,12 @@ Now if we just add a prior on universes, we can calculate the expected utility (
 Imagine you’re in the primordial casino, rolling the dice over and over, each time choosing a `universe` (according to `prior`).  Each time, you use your `policy` to unfold the `universe` into a block universe and apply your `utility` function, then add the resulting value to the tally.  The long-run average of this process is the expected utility given your `policy`.  (Hazelflax calculates this by taking the `prior` weighted sum of block universe utilities, across all universes.)
 
 Max expected utility:
-> $\max_{h\in H} \sum_{u\in U} P(u)utility(block(u, h))$
+$\DeclareMathOperator{\utility}{utility}$
+$\DeclareMathOperator{\block}{block}$
+> $\max_{h\in H} \sum_{u\in U} P(u)\utility(\block(u, h))$
 > $H$ is the set of candidate policies.
 > $U$ is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)
-> $block(u,h)$ is a block universe ($u$ unfolded (into a sequence of states, choices and agents) given policy $h$)
+> $\block(u,h)$ is a block universe ($u$ unfolded (into a sequence of states, choices and agents) given policy $h$)
 
 # Code
 
