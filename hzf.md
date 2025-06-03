@@ -1,8 +1,9 @@
+% A Model of Unsupervised Rationality
 
 The following is a mathematical definition of what it means exactly to be a utility-maximizing agent.  E.g. it may be used to verify whether an algorithm results in expected utility maximizing choices.  I will refer to it as the Hazelflax (for lack of a better name).  It seems to deal well with every case I have tested (including anthropics paradoxes).  It has the added benefits that:
 1) it requires only:
     - a prior on the underlying universe
-    - the raw data/self-knowledge available.  (it does not require (additional techniques to compute) the probabilities implied by evidence.)
+    - the raw data/self-knowledge available.  (It does not require (additional techniques to compute) the probabilities implied by evidence.)
 2) it’s utility function is defined on the block universe. (It doesn’t require a reward input.) (I.e. it is “unsupervised”.)  This may allow it to serve the interests of life generally.  E.g. by seeding other planets with microorganisms that will eventually result in rational agents.
 
 That is to say, it is an all-in-one world improving algorithm.
@@ -40,10 +41,10 @@ Imagine you’re in the primordial casino, rolling the dice over and over, each 
 
 Max expected utility:
 $\DeclareMathOperator{\utility}{utility}$
-$\DeclareMathOperator{\block}{block}$
-> $\max_{h\in H} \sum_{u\in U} P(u)\utility(\block(u, h))$
-> $H$ is the set of candidate policies.
-> $U$ is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)
+$\DeclareMathOperator{\block}{block}$\
+> $\max_{h\in H} \sum_{u\in U} P(u)\utility(\block(u, h))$\
+> $H$ is the set of candidate policies.\
+> $U$ is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)\
 > $\block(u,h)$ is a block universe ($u$ unfolded (into a sequence of states, choices and agents) given policy $h$)
 
 # Code
