@@ -20,14 +20,14 @@ The basic idea is that you want to find an expected utility (EU) maximizing poli
 You can calculate EU given a policy using a prior on universes.  These universes need to include enough detail to compute a full block universe just given a policy.  I.e. (the laws + initial conditions + randomness) + policy = history including everything we care about.
 (For agents that are not identical, a universe must imply their code which we can execute to determine their choices.  When a universe presents an agent with our code, we can’t simply run it because that would cause an infinite regress.  Use the policy to compute its choice. )
 
-Now imagine you’re in the primordial casino, rolling the dice over and over, each time choosing a `universe` (according to `prior`).  Each time, you use your `policy` to unfold the `universe` into a block universe and apply your `utility` function, then add the resulting value to the tally.  The long-run average of this process is the expected utility given your `policy`.  (Hazelflax calculates this by taking the `prior` weighted sum of block universe utilities, across all universes.)
+Imagine you’re in the primordial casino, rolling the dice over and over, each time choosing a `universe` (according to `prior`).  Each time, you use your `policy` to unfold the `universe` into a block universe and apply your `utility` function, then add the resulting value to the tally.  The long-run average of this process is the expected utility given your `policy`.  (Hazelflax calculates this by taking the `prior` weighted sum of block universe utilities, across all universes.)
 
 > Expected utility corresponding to the optimum policy:\
-> $\max_{h\in H} \sum_{u\in U} P(u)\verb|utility|(\verb|block|(u, h))$
-> - $H$ is the set of candidate policies.
-> - $U$ is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)
-> - $P(u)$ is the prior probability of universe $u$.
-> - $\verb|block|(u,h)$ is the block universe that unfolds from universe $u$, when agents with your code use policy $h$.  
+> `\max_{h \in H} \sum_{u \in U} P(u)utility(block(u, h))`
+> - `H` is the set of candidate policies.
+> - `U` is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)
+> - `P(u)` is the prior probability of universe $u$.
+> - `block(u,h)` is the block universe that unfolds from universe $u$, when agents with your code use policy $h$.  
 
 # Examples
 
