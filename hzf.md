@@ -119,6 +119,10 @@ Q: Why rely only on priors and raw evidence?
 A: People seem to ask too much of probabilities.  Often the evidence doesn’t tell you an exact probability or even a probability range.  Translating the evidence to probabilities often entails losing information, yet decision making techniques often rely on probabilities.
 Hazelflax skips the lossy intermediate epistemology and  may squeeze every drop of rational decision making from the evidence.
 
+Q: Should `agent` also specify the runtime (and other computing resources) available so you only choose a policy that will return its choice in the time the universe makes available (in each circumstance)?
+
+A: Probably.  (I didn't want to distract from the basic concept.)
+
 Q: Why not represent other agents by their utility function (rather than their code)?
 
 A: If you optimize over multiple utility functions and corresponding policies, how do you choose a point on the Pareto frontier?
@@ -142,4 +146,8 @@ A: A universe may be infinite spatially, while the `universe` function that iter
 Q: Instead of the Hazelflax, why not define the crucible of natural selection?  Humans can concieve of all sorts of possibilities that don't exist in our universe (e.g. transfinite sets, oracles).
 
 A: You might get the same benefit just by limiting the algorithmic complexity of your policy.  It may not be as optimal for the particular universe(s) for which you have a prior, but it may generalize better.  (Just an intuition.)
+
+Q: Is the prior generally less important when the evidence is stronger?
+
+A: Yes. Stronger evidence reduces the set of universes where the corresponding choice in your policy affects the utility maximizing choice.  E.g. if there’s only one possible universe with an agent with your observations, the prior doesn’t matter.  More realistically, if all the matching universes have the same physics but different random bits, the prior also doesn’t matter.
 
