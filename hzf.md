@@ -149,5 +149,7 @@ A: You might get the same benefit just by limiting the algorithmic complexity of
 
 Q: Is the prior generally less important when the evidence is stronger?
 
-A: Yes. Stronger evidence reduces the set of universes where the corresponding choice in your policy affects the utility maximizing choice.  E.g. if there’s only one possible universe with an agent with your observations, the prior doesn’t matter.  More realistically, if all the matching universes have the same physics but different random bits, the prior also doesn’t matter.
+A: Yes. Stronger evidence reduces the set of universes where your choice effects utility.  E.g. if there’s only one possible universe with an agent with your observations, you would make the choice that's best in that universe, regardless of the universe's probability.
+If your choice of prior only applies to agents with no less evidence (I.e. future instances of yourself.), s.t. none of them appear in other universes, your choice of prior won't effect your choices except maybe indirectly.  E.g. if it leaks out or effects your computing time.
+More realistically, if all the matching universes have the same physics but different random bits, the same argument applies. 
 
