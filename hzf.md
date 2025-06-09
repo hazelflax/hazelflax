@@ -26,7 +26,7 @@ Imagine you’re in the primordial casino, rolling the dice over and over, each 
 > `\max_{h \in H} \sum_{u \in U} P(u)utility(block(u, h))`
 > - `H` is the set of candidate policies.
 > - `U` is the set of possible universes. (Laws + randomness.  Everything needed to determine a block universe except your policy.)
-> - `P(u)` is the prior probability of universe $u$.
+> - `P(u)` is the prior probability of universe `u`.
 > - `block(u,h)` is the block universe that unfolds from universe `u`, when agents with your code use policy `h`.  
 
 # Examples
