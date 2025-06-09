@@ -153,3 +153,8 @@ A: Yes. Stronger evidence reduces the set of universes where your choice effects
 If your choice of prior only applies to agents with no less evidence (I.e. future instances of yourself.), s.t. none of them appear in other universes, your choice of prior won't effect your choices except maybe indirectly.  E.g. if it leaks out or effects your computing time.
 More realistically, if all the matching universes have the same physics but different random bits, the same argument applies. 
 
+Q: Is it causal or evidential?
+
+A: I think it has the benefits of an evidential decision theory. 
+For a `universe` to model agents like Newcombs’ demon (without infinite regress (it runs you and you run it) (`universe` is required to halt)) it must separate out its simulation of you as an agent, s.t. in `policy_ev` there will be two instances that choose a box, one of which causes the contents of the boxes.
+
