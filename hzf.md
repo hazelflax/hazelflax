@@ -112,6 +112,23 @@ class hazelflax choice state observations where
 
 `policy_ev` defines how good a policy is.  A policy might be implemented with minimax or a decision making algorithm yet to be invented.  To make it tractable, one may need to settle for some notion of the “logical expected value” of `policy_ev policy`.  With the question formalized, a sufficiently advanced automated theorem prover may be able to search for and verify policies. 
 
+## Example: Ultimate conservationist
+
+Suppose you want to maximize the probability that there is no last agent.  (I.e. utility is 1 if there is no last agent, 0 otherwise.)
+First define a mapping from integers to policies and to universes.
+For a given k, run the first k universes on for at most k steps on each of the first k policies.  
+For a given policy, adding up the priors on universes that returned `Nothing` (plus the priors on the remaining universes that weren’t run) gives an upper-bound on its corresponding EU.
+With a large enough k, the choice (given one’s observations) of the policy with the highest upper-bound is at least as good as any (assuming a bounded set of options for one’s choice).  
+
+## Warflax
+
+Maybe a war-game exercise could be modeled after the hazelflax:
+Contestants submit policies and possible universes. Judges assess the probability of each universe and the utility of each universe-policy pairing, then calculate the expected utility given each policy. The contestant who submitted the highest EU policy wins.  (A universe may take random bits as a parameter, s.t. the EU of a policy given a universe can be estimated by sampling.)
+
+(Do war-games often have flips that determine the nature of the universe? (E.g. what the weighting should be on subsequent coin flips.  E.g. how do untested pairings of weapon systems fare?) With an adversarial process for discovering the salient possibilities?)
+
+(If this isn’t so different from traditional war-games, Hazelflax may be to war-games what a Turing machine is to a mathematician with a notebook. )
+
 # Discussion 
 
 Q: Why rely only on priors and raw evidence?
@@ -159,3 +176,8 @@ A: I think it has the benefits of an evidential decision theory.
 For a `universe` to model agents like Newcomb’s demon it must separate out its simulation of you as an agent, s.t. in `policy_ev` there will be two `agent`s that choose a box, one of which causes the contents of the boxes.
 If the demon needs to run you, and you run the demon, ether `universe` or the `agent` representing the demon will not halt as it is required to.
 
+[//]: # (
+Q: Are there commitment strategies it could benefit from hardcoding?  (Assuming information about its true policy leaks out.)
+
+A: It seems this will only benefit it through other agents knowing its policy, which they can only do through the choiches of an agent with its code (otherwise there is an infinite regress). ...
+)
