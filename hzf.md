@@ -116,8 +116,10 @@ class hazelflax choice state observations where
 
 Suppose you want to maximize the probability that there is no last agent.  (I.e. utility is 1 if there is no last agent, 0 otherwise.)
 First define a mapping from integers to policies and to universes.
-For a given k, run the first k universes on for at most k steps on each of the first k policies.  
-For a given policy, adding up the priors on universes that returned `Nothing` (plus the priors on the remaining universes that weren’t run) gives an upper-bound on its corresponding EU.
+For a given k, run the first k universes for at most k steps on each of the first k policies.  
+
+For a given policy, adding up the priors on universes that haven't returned `Nothing` (plus the priors on the remaining universes that weren’t run) gives an upper-bound on its corresponding EU.
+
 With a large enough k, the choice (given one’s observations) of the policy with the highest upper-bound is at least as good as any (assuming a bounded set of options for one’s choice).  
 
 ## Warflax
