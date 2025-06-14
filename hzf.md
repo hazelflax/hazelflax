@@ -176,8 +176,3 @@ A: I think it has the benefits of an evidential decision theory.
 For a `universe` to model agents like Newcomb’s demon it must separate out its simulation of you as an agent, s.t. in `policy_ev` there will be two `agent`s that choose a box, one of which causes the contents of the boxes.
 If the demon needs to run you, and you run the demon, ether `universe` or the `agent` representing the demon will not halt as it is required to.
 
-[//]: # (
-Q: Are there commitment strategies it could benefit from hardcoding?  (Assuming information about its true policy leaks out.)
-
-A: It seems this will only benefit it through other agents knowing its policy, which they can only do through the choiches of an agent with its code (otherwise there is an infinite regress). ...
-)
