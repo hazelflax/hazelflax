@@ -1,0 +1,11 @@
+# Dice protocol
+
+Suppose two agents have their own sources of randomness, but no source trusted by both.  How can they agree on a random number (e.g. to settle a bet)?
+
+A: choose a random number and reveal a crytographic hash of it.
+B: remember A's hash, then choose a random number and reveal it.
+A: remember B's number, reveal your random number.
+B: check A's number against A's hash.
+A,B: add the random numbers and take the modulous (E.g. % 6 for dice).
+
+(Neither agent can gain advantage by choosing a non-random number unless the other agent does.)

@@ -31,9 +31,16 @@ Imagine you’re in the primordial casino, rolling the dice over and over, each 
 
 # Examples
 
-## Sleeping beauty
+## [Sleeping beauty] [1]
 
 The prior gives 0.5 probability to the universe where the coin comes up heads.  Same for tails.  For whatever utility function you want to maximize, just consider the implications of each candidate policy in each universe and apply the formula.
+
+## [Doomsday paradox] [2]
+
+
+
+[1]: <https://www.scientificamerican.com/article/why-the-sleeping-beauty-problem-is-keeping-mathematicians-awake/> "Why the ‘Sleeping Beauty Problem’ Is Keeping Mathematicians Awake"
+[2]: <https://anthropic-principle.com/q=anthropic_principle/doomsday_argument/> "A Primer on the Doomsday Argument" 
 
 # Formalization 
 
@@ -116,7 +123,7 @@ class hazelflax choice state observations where
 
 Suppose you want to maximize the probability that there is no last agent.  (I.e. utility is 1 if there is no last agent, 0 otherwise.)
 First define a mapping from positive integers to policies and to `universe`s.
-Make the prior of `universe` `n`, `1/2^n`.
+Define the prior of `universe` `n`, `1/2^n`.
 
 For a given k, run the first k universes for at most k steps on each of the first k policies.  
 
