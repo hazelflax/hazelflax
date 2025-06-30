@@ -46,6 +46,8 @@ lim_{p->0} (1-(1-p)^90)/(1-(1-p)^100) = 0.9
 
 Where p is the probability of a given agent matching.
 
+(If you just e.g. observe more dust particles floating around, this will decrease the probability of a match, but it doesn’t change one’s circumstances.) 
+
 Bostrom Step 2: The probability of the person in cubicle \#7 being exactly like me is unaffected by the coin flip.  So, given the evidence there is still a 50% probability of each coin outcome.  The Doomsday argument is invalid.  (The problem with the self-sampling assumption seems to be that the probability of any given observer being exactly like you doesn’t necessarily have anything to do with the total number of observers.)
 
 [1]: <https://www.scientificamerican.com/article/why-the-sleeping-beauty-problem-is-keeping-mathematicians-awake/> "Why the ‘Sleeping Beauty Problem’ Is Keeping Mathematicians Awake"
