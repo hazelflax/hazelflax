@@ -37,7 +37,7 @@ The prior gives 0.5 probability to the universe where the coin comes up heads.  
 
 ## [Doomsday paradox] [2]
 
-The confusion here seems to be that the universe doesn’t make observers by pulling them from an urn or something.  It makes observers the same way it makes everything else.  Without further information, let’s assume the characteristics of the observers are independent and identically distributed, such that each one has the same probability of being identical to me.  This probably doesn’t change if the number of observers changes.
+The confusion here seems to be that the universe doesn’t make observers by pulling them from an urn or something.  It makes observers the same way it makes everything else.  Without further information, let’s assume the characteristics of the observers are independent and identically distributed, such that each one has the same probability of being identical to me.  (This probability doesn’t change if the number of observers changes.)
 
 Bostrom Step 1: Suppose our prior has many universes with 100 cubicles, each with random agents in the cubicles.  My expected utility only depends upon my policy through the universes that have an exact match.  If an exact match is unlikely enough that none have two agents identical to me, of the universes that have a match, the following fraction have a match in a blue room:
 
