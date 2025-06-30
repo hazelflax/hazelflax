@@ -37,7 +37,16 @@ The prior gives 0.5 probability to the universe where the coin comes up heads.  
 
 ## [Doomsday paradox] [2]
 
+The confusion here seems to be that the universe doesn’t make observers by pulling them from an urn or something.  It makes observers the same way it makes everything else.  Without further information, let’s assume the characteristics of the observers are independent and identically distributed, such that each one has the same probability of being identical to me.  This probably doesn’t change if the number of observers changes.
 
+Bostrom Step 1: Suppose our prior has many universes with 100 cubicles, each with random agents in the cubicles.  My expected utility only depends upon my policy through the universes that have an exact match.  If an exact match is unlikely enough that none have two agents identical to me, of the universes that have a match, the following fraction have a match in a blue room:
+
+blue match fraction / any match fraction = 
+lim_{p->0} (1-(1-p)^90)/(1-(1-p)^100) = 0.9
+
+Where p is the probability of a given agent matching.
+
+Bostrom Step 2: The probability of the person in cubicle \#7 being exactly like me is unaffected by the coin flip.  So, given the evidence there is still a 50% probability of each coin outcome.  The Doomsday argument is invalid.  (The problem with the self-sampling assumption seems to be that the probability of any given observer being exactly like you doesn’t necessarily have anything to do with the total number of observers.)
 
 [1]: <https://www.scientificamerican.com/article/why-the-sleeping-beauty-problem-is-keeping-mathematicians-awake/> "Why the ‘Sleeping Beauty Problem’ Is Keeping Mathematicians Awake"
 [2]: <https://anthropic-principle.com/q=anthropic_principle/doomsday_argument/> "A Primer on the Doomsday Argument" 
